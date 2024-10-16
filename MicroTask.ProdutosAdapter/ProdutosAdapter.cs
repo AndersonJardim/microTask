@@ -19,9 +19,15 @@ namespace MicroTask.ProdutosAdapter
 
         public async Task<Produtos> GetByIdAsync(int id)
         {
-            var result = await produtosAdapter.GetByIdAsync(id);
-
-            return mapper.Map<Produtos>(result);
+            try
+            {
+                var result = await produtosAdapter.GetByIdAsync(id);
+                return mapper.Map<Produtos>(result);
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
         }
     }
 }

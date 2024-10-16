@@ -21,7 +21,8 @@ namespace MicroTask.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CadastrarVenda(VendasPostDto vendaPost)
         {
-            return Ok(await produtosAdapter.GetByIdAsync(vendaPost.IdProduto));
+            var testePost = await produtosAdapter.GetByIdAsync(vendaPost.IdProduto);
+            return Ok(testePost);
         }
     }
 }
