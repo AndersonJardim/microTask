@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MicroTask.Domain.Interfaces;
+using MicroTask.Domain.Adapters;
 using MicroTask.WebApi.Dto;
 
 namespace MicroTask.WebApi.Controllers

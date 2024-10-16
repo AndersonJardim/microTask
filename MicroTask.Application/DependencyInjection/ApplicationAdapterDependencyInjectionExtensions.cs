@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MicroTask.Application.Service;
+using MicroTask.Domain.Interfaces;
 
 namespace MicroTask.Application.DependencyInjection
 {
@@ -10,7 +11,7 @@ namespace MicroTask.Application.DependencyInjection
         {
             ArgumentNullException.ThrowIfNull(nameof(service));
             
-            service.AddTransient<ProdutosService>();
+            service.AddTransient<IProdutosGeral, ProdutosService>();
 
             return service;
         }

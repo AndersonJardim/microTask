@@ -2,7 +2,7 @@
 
 namespace MicroTask.Domain.Interfaces
 {
-    public interface IProdutosAdapterCore
+    public interface IProdutosGeral
     {
         Task<Produtos> GetByIdAsync(int id);
     }

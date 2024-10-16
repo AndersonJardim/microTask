@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MicroTask.Domain.Interfaces;
+using MicroTask.Domain.Adapters;
 using MicroTask.ProdutosAdapter.Service;
 using Refit;
 

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using MicroTask.Domain.Interfaces;
+using MicroTask.Domain.Adapters;
 using MicroTask.Domain.Models;
 using MicroTask.ProdutosAdapter.Service;
 
