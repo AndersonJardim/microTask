@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MicroTask.Domain\MicroTask.Domain.csproj" />
+    <ProjectReference Include="..\MicroTask.ProdutosAdapter\MicroTask.ProdutosAdapter.csproj" />
+  </ItemGroup>
+
 </Project>
