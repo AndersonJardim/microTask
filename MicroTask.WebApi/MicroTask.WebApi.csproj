@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MicroTask.Application\MicroTask.Application.csproj" />
     <ProjectReference Include="..\MicroTask.Domain\MicroTask.Domain.csproj" />
+    <ProjectReference Include="..\MicroTask.Infra.Data\MicroTask.Infra.Data.csproj" />
+    <ProjectReference Include="..\MicroTask.ProdutosAdapter\MicroTask.ProdutosAdapter.csproj" />
   </ItemGroup>
 
 </Project>

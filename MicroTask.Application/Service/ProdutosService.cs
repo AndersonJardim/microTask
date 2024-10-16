@@ -3,7 +3,7 @@ using MicroTask.Domain.Models;
 
 namespace MicroTask.Application.Service
 {
-    public class ProdutosService : IProdutosAdapterCore
+    public class ProdutosService //: IProdutosAdapterCore
     {
         private readonly IProdutosAdapterCore produtosAdapter;
 

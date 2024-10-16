@@ -4,7 +4,7 @@ using MicroTask.Domain.Interfaces;
 using MicroTask.ProdutosAdapter.Service;
 using Refit;
 
-namespace MicroTask.ProdutosAdapter.DepencyInjection
+namespace MicroTask.ProdutosAdapter.DependencyInjection
 {
     public static class ProdutosAdapterDependencyInjectionExtensions
     {
