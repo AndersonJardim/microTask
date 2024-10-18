@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MicroTask.Domain.Adapters;
 using MicroTask.WebApi.Dto;
+using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace MicroTask.WebApi.Controllers
 {
@@ -27,11 +29,18 @@ namespace MicroTask.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CadastrarVenda(VendasPostDto vendaPost)
+        public async Task<IActionResult> CadastrarVenda([FromBody]VendasPostDto vendaPost)
+        //public async Task<IActionResult> CadastrarVenda(int idCliente, int idProduto) //(VendasPostDto vendaPost)
         {
             var getProduto = await produtosAdapter.GetByIdAsync(vendaPost.IdProduto);
             var getCliente = await httpClient.GetAsync($"https://localhost:7052/api/Clientes/GetById?id={vendaPost.IdCliente}");
-            return Ok((getProduto, getCliente));
+
+            //var getProduto = await produtosAdapter.GetByIdAsync(idProduto);
+            //var getCliente = await httpClient.GetAsync($"https://localhost:7052/api/Clientes/GetById?id={idCliente}");
+
+            var clienteDto = JsonConvert.DeserializeObject<ClientesDto>(getCliente.Content.ReadAsStringAsync().Result);
+
+            return Ok(clienteDto);
         }
     }
 }
